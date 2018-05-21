@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> -->
+	<title>聚美优品</title>
+	<!-- 加载Boots核心样式 -->
+	<link rel="stylesheet" href="./bootscss/bootstrap.min.css">
+	<!-- 加载Boots（主题文件）可以不引入 -->
+	<link rel="stylesheet" href="./bootscss/bootstrap-theme.min.css" />
+
+	<!-- 加载独立CSS文件 -->
+	<link rel="stylesheet" type="text/css" href="./css/index.css">
+
+	<!-- 加载JQ -->
+	<script type="text/javascript" src="./js/jquery-3.3.1.min.js"></script>
+	<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+	<script src="./js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$(document).scroll(function(){
+				if($(this).scrollTop()>110){
+					$('#hearder_nav nav').addClass('navbar-fixed-top');
+				}else{
+					$('#hearder_nav nav').removeClass('navbar-fixed-top');
+				}
+			});
+			$("#search_action img").on('click',function(){
+  				$(".searchWrap").css({display:'block'});
+			});
+
+			$("#search_back").on('click',function(){
+  				$(".searchWrap").css({display:'none'});
+			});
+
+
+			let $search_link = $('.search_link em');
+			$search_link.click(function(){
+				$(this).nextAll(".search_subs").show();
+  				$(this).css({color: '#fe4070'});
+  				$(this).nextAll('.arrow').css({transform: ' rotate(90deg)'});
+			});
+			/*$("body").on('click', '.search_link',function(){
+  				$(".search_subs").css({display:'block'});
+  				$('.search_link').css({color: '#fe4070'});
+  				$('.arrow').css({transform: ' rotate(90deg)'});
+			});
+			$('body').on("click", ".search_subs", function(){
+				// alert(123)
+			    $(".search_sub").hide();
+			    $('.search_link em').css({color: '#000'});
+			    // $(this).find('span').css({transform: ' rotate(270deg)'});
+			    console.log($('.arrow').eq(0).css({transform: ' rotate(270deg)'}));
+			});*/
+			let $search_sub = $('.search_sub');
+			$search_sub.click(function(){
+				$(this).parent().children().hide();
+				// $(this).parent('.search_sub').find('em');
+			});
+		});
+    </script>
+</head>
+<body>
+	<!-- 另一个页面 -->
+	<div class="searchWrap navbar-fixed-top">
+		<!-- <div id="page_outer" class="show"></div> -->
+		<div id="search_page" class="show" style="transform-origin: 0px 0px 0px; opacity: 1;">
+			<div class="search_head">
+				<a id="history_back" class="pull_left">
+					<img src="//f0.jmstatic.com/btstatic/h5/common/left_arrow.png" alt="">
+				</a> 
+				<div class="input_outer">
+					<img src="./img/search_btn.png" alt="" class="search_icon"> 
+					<input type="text" placeholder="搜索商品名称、品牌、功效" id="search_input" class="search_input">
+				</div> 
+				<a id="search_back" class="search_btn" style="transform-origin: 0px 0px 0px; opacity: 1;">返回
+				</a> 
+				<a id="search_cancel" class="search_btn" style="display: none;">搜索
+				</a>
+			</div> 
+			<ul class="search_links" style="height:100%; transform-origin: 0px 0px 0px; opacity: 1;">
+				<li class="search_link">
+					<em>面部护肤</em>
+					<span class="arrow"></span>
+					<ul class="search_subs">
+						<li class="search_sub">
+							<a href="/search/index?category_id=62">眼部护理</a>
+						</li>
+						<li class="search_sub">
+							<a href="/search/index?category_id=10">化妆水/爽肤水</a>
+						</li>
+						<li class="search_sub">
+							<a href="/search/index?category_id=81">啫哩/凝露/凝胶</a>
+						</li>
+						<li class="search_sub">
+							<a href="/search/index?category_id=17">精华</a>
+						</li>
+						<li class="search_sub">
+							<a href="/search/index?category_id=16">面霜</a>
+						</li>
+						<li class="search_sub">
+							<a href="/search/index?category_id=83">唇部护理</a>
+						</li>
+						<li class="search_sub">
+							<a href="/search/index?category_id=19">洁面</a>
+						</li>
+						<li class="search_sub">
+							<a href="/search/index?category_id=338">T区/特殊护理</a>
+						</li>
+						<li class="search_sub">
+							<a href="/search/index?category_id=14">面膜</a>
+						</li>
+						<li class="search_sub">
+							<a href="/search/index?category_id=9">乳液</a>
+						</li>
+						<li class="search_sub">
+							<a href="/search/index?category_id=197">精油</a>
+						</li>
+						<li class="search_sub">
+							<a href="/search/index?category_id=23">护肤套装</a>
+						</li>
+					</ul>
+				</li>
+				<li class="search_link">
+					<em>彩妆</em>
+					<span class="arrow"></span>
+					<ul class="search_subs">
+						<li class="search_sub"><a href="/search/index?category_id=386">眼部</a>
+						</li>
+						<li class="search_sub"><a href="/search/index?category_id=383">粉饼/散粉</a>
+						</li>
+						<li class="search_sub"><a href="/search/index?category_id=388">唇部</a>
+						</li>
+						<li class="search_sub"><a href="/search/index?category_id=387">睫毛</a>
+						</li>
+						<li class="search_sub"><a href="/search/index?category_id=384">眉部</a>
+						</li>
+						<li class="search_sub"><a href="/search/index?category_id=389">美甲</a>
+						</li>
+						<li class="search_sub"><a href="/search/index?category_id=55">隔离</a>
+						</li>
+						<li class="search_sub"><a href="/search/index?category_id=38">底妆</a>
+						</li>
+						<li class="search_sub"><a href="/search/index?category_id=143">遮瑕/修容</a>
+						</li>
+						<li class="search_sub"><a href="/search/index?category_id=33">防晒</a>
+						</li>
+						<li class="search_sub"><a href="/search/index?category_id=18">卸妆</a>
+						</li>
+						<li class="search_sub"><a href="/search/index?category_id=8">腮红</a>
+						</li>
+						<li class="search_sub"><a href="/search/index?category_id=37">彩妆套装</a>
+						</li>
+					</ul>
+				</li>
+				<li class="search_link">
+					<em>身体护理</em>
+					<span class="arrow"></span>
+					<ul class="search_subs">
+						<li class="search_sub"><a href="/search/index?category_id=198">个人护理</a>
+						</li>
+						<li class="search_sub"><a href="/search/index?category_id=57">润肤</a>
+						</li>
+						<li class="search_sub"><a href="/search/index?category_id=22">纤体/美体</a>
+						</li>
+						<li class="search_sub"><a href="/search/index?category_id=280">手足护理</a>
+						</li>
+						<li class="search_sub"><a href="/search/index?category_id=65">护发</a>
+						</li>
+						<li class="search_sub"><a href="/search/index?category_id=54">沐浴</a>
+						</li>
+						<li class="search_sub"><a href="/search/index?category_id=122">洗发</a>
+						</li>
+						<li class="search_sub"><a href="/search/index?category_id=395">美发造型</a>
+						</li>
+						<li class="search_sub"><a href="/search/index?category_id=94">口腔护理</a>
+						</li>
+						<li class="search_sub"><a href="/search/index?category_id=151">颈部护理</a>
+						</li>
+						<li class="search_sub"><a href="/search/index?category_id=13">身体护理套装</a>
+						</li>
+					</ul>
+				</li>
+				<li class="search_link">
+					<em>香水</em>
+					<span class="arrow"></span>
+					<ul class="search_subs">
+						<li class="search_sub"><a href="/search/index?category_id=35">女士香水</a>
+						</li>
+						<li class="search_sub"><a href="/search/index?category_id=309">香水套装</a>
+						</li>
+						<li class="search_sub"><a href="/search/index?category_id=53">男士香水</a>
+						</li>
+						<li class="search_sub"><a href="/search/index?category_id=89">中性香水</a>
+						</li>
+						<li class="search_sub"><a href="/search/index?category_id=100">Q版香水</a>
+						</li>
+					</ul>
+				</li>
+				<li class="search_link">
+					<em>男士护理</em>
+					<span class="arrow"></span>
+					<ul class="search_subs">
+						<li class="search_sub"><a href="/search/index?category_id=418">男士护肤</a>
+						</li>
+						<li class="search_sub"><a href="/search/index?category_id=419">男士身体护理</a>
+						</li>
+						<li class="search_sub"><a href="/search/index?category_id=409">男士套装</a>
+						</li>
+					</ul>
+				</li>
+				<li class="search_link">
+					<em>套装礼盒</em>
+					<span class="arrow"></span>
+					<ul class="search_subs">
+						<li class="search_sub"><a href="/search/index?category_id=155">小样/旅行套装</a>
+						</li>
+					</ul>
+				</li>
+				<li class="search_link">
+					<em>美容工具</em>
+					<span class="arrow"></span>
+					<ul class="search_subs">
+						<li class="search_sub"><a href="/search/index?category_id=411">护肤工具</a>
+						</li>
+						<li class="search_sub"><a href="/search/index?category_id=412">彩妆工具</a>
+						</li>
+						<li class="search_sub"><a href="/search/index?category_id=413">美发工具</a>
+						</li>
+						<li class="search_sub"><a href="/search/index?category_id=414">美体工具</a>
+						</li>
+						<li class="search_sub"><a href="/search/index?category_id=415">美甲工具</a>
+						</li>
+						<li class="search_sub"><a href="/search/index?category_id=416">其他美容工具</a>
+						</li>
+					</ul>
+				</li>
+				<li class="search_link">
+					<em>其他</em>
+					<span class="arrow"></span>
+					<ul class="search_subs">
+						<li class="search_sub"><a href="/search/index?category_id=481">喜从盒来</a>
+						</li>
+						<li class="search_sub"><a href="/search/index?category_id=483">会员生日礼包</a>
+						</li>
+					</ul>
+				</li>
+			</ul> 
+			<ul class="history_lists" style="display: none;">
+				<div id="clear_history">清空历史记录</div>
+			</ul> 
+			<ul class="recommend_lists" style="display: none;"></ul>
+		</div> 
+		<input type="hidden" value="" id="h5_host_url">
+	</div>
+
+	<!-- 头部 -->
+	<header>
+		<div class="row">
+			<a id="page_top" class="index-search col-sm-10">
+				<img src="./img/search_btn.png">
+				<span>搜索商品 分类 功效</span>
+			</a> 
+			<span id="search_action" class="col-sm-2">
+				<img src="./img/search_list2.png" class="search">
+			</span>
+		</div>
+	</header>
+    <!-- 主体 -->
+	<main>
+		<!--        顶部导航条             -->
+		<div id="hearder_nav">
+			<nav id="nav-outer">
+				<div id="nav-inner" class="headerNav clearfix" style="width:100%;">
+					<p class="navTitle nt_deal nav_select"><a href="/"><span>首页</span> <span class="header-nav-line"></span></a></p>
+					<p class="navTitle nt_deal"><a href="xiangqing.html"><span>极速免税店</span> <span class="header-nav-line"></span></a></p> 
+					<p class="navTitle nt_deal"><a href="/muandbaby/index"><span>母婴</span> <span class="header-nav-line"></span></a></p> 
+					<p class="navTitle nt_deal"><a href="yueliang.html"><span>轻奢</span> <span class="header-nav-line"></span></a></p> 
+					<p class="navTitle nt_deal"><a href="/pop"><span>名品特卖</span> <span class="header-nav-line"></span></a></p>
+				</div>
+			</nav>
+		</div>
+	
+		<!-- 主体头部 -->
+		<section class="mixcard-list">
+			<div class="tab-title">
+				<span class="title-item tab-click">
+					今日10点上新
+				</span> 
+				<span class="title-item">
+					明日10点预告
+				</span>
+			</div>
+			<!-- 列表 -->
+			<div class="liebiao">
+				<div class="box">
+					<div class="box_img">
+						<!-- <img src="./img/a.jpg" alt=""> -->
+						<div class="box_wenzi">
+							<div class="wenzi_tou">
+								AHC B5玻尿酸水乳套装,让你不做美容也能润到掐出水!
+							</div>
+							<div class="wenzi_center"></div>
+							<div class="wenzi_di">
+								<div class="wenzi-list">
+									<span class="jumei-price">¥
+										<span>189</span>
+									</span> 
+									<span class="del-price">¥455</span>
+								</div> 
+								<div class="buy-num">7.5万条评论</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="box">
+					<div class="box_img1"></div>
+				</div>
+				<div class="box">
+					<div class="box_img2">
+						<!-- <img src="./img/a.jpg" alt=""> -->
+						<div class="box_wenzi">
+							<div class="wenzi_tou">
+								AHC B5玻尿酸水乳套装,让你不做美容也能润到掐出水!
+							</div>
+							<div class="wenzi_center"></div>
+							<div class="wenzi_di">
+								<div class="wenzi-list">
+									<span class="jumei-price">¥
+										<span>189</span>
+									</span> 
+									<span class="del-price">¥455</span>
+								</div> 
+								<div class="buy-num">7.5万条评论</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="box">
+					<div class="box_img3"></div>
+				</div>
+				<div class="box">
+					<div class="box_img4">
+						<!-- <img src="./img/a.jpg" alt=""> -->
+						<div class="box_wenzi">
+							<div class="wenzi_tou">
+								AHC B5玻尿酸水乳套装,让你不做美容也能润到掐出水!
+							</div>
+							<div class="wenzi_center"></div>
+							<div class="wenzi_di">
+								<div class="wenzi-list">
+									<span class="jumei-price">¥
+										<span>189</span>
+									</span> 
+									<span class="del-price">¥455</span>
+								</div> 
+								<div class="buy-num">7.5万条评论</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="box">
+					<div class="box_img5"></div>
+				</div>
+				<div class="box">
+					<div class="box_img6">
+						<!-- <img src="./img/a.jpg" alt=""> -->
+						<div class="box_wenzi">
+							<div class="wenzi_tou">
+								AHC B5玻尿酸水乳套装,让你不做美容也能润到掐出水!
+							</div>
+							<div class="wenzi_center"></div>
+							<div class="wenzi_di">
+								<div class="wenzi-list">
+									<span class="jumei-price">¥
+										<span>189</span>
+									</span> 
+									<span class="del-price">¥455</span>
+								</div> 
+								<div class="buy-num">7.5万条评论</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="box">
+					<div class="box_img7">
+						<!-- <img src="./img/a.jpg" alt=""> -->
+						<div class="box_wenzi">
+							<div class="wenzi_tou">
+								AHC B5玻尿酸水乳套装,让你不做美容也能润到掐出水!
+							</div>
+							<div class="wenzi_center"></div>
+							<div class="wenzi_di">
+								<div class="wenzi-list">
+									<span class="jumei-price">¥
+										<span>189</span>
+									</span> 
+									<span class="del-price">¥455</span>
+								</div> 
+								<div class="buy-num">7.5万条评论</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="box">
+					<div class="box_img8"></div>
+				</div>
+				<div class="box">
+					<div class="box_img9"></div>
+				</div>
+				<div class="box">
+					<div class="box_img10">
+						<!-- <img src="./img/a.jpg" alt=""> -->
+						<div class="box_wenzi">
+							<div class="wenzi_tou">
+								AHC B5玻尿酸水乳套装,让你不做美容也能润到掐出水!
+							</div>
+							<div class="wenzi_center"></div>
+							<div class="wenzi_di">
+								<div class="wenzi-list">
+									<span class="jumei-price">¥
+										<span>189</span>
+									</span> 
+									<span class="del-price">¥455</span>
+								</div> 
+								<div class="buy-num">7.5万条评论</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="box">
+					<div class="box_img11">
+						<!-- <img src="./img/a.jpg" alt=""> -->
+						<div class="box_wenzi">
+							<div class="wenzi_tou">
+								AHC B5玻尿酸水乳套装,让你不做美容也能润到掐出水!
+							</div>
+							<div class="wenzi_center"></div>
+							<div class="wenzi_di">
+								<div class="wenzi-list">
+									<span class="jumei-price">¥
+										<span>189</span>
+									</span> 
+									<span class="del-price">¥455</span>
+								</div> 
+								<div class="buy-num">7.5万条评论</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="box">
+					<div class="box_img12">
+						<!-- <img src="./img/a.jpg" alt=""> -->
+						<div class="box_wenzi">
+							<div class="wenzi_tou">
+								AHC B5玻尿酸水乳套装,让你不做美容也能润到掐出水!
+							</div>
+							<div class="wenzi_center"></div>
+							<div class="wenzi_di">
+								<div class="wenzi-list">
+									<span class="jumei-price">¥
+										<span>189</span>
+									</span> 
+									<span class="del-price">¥455</span>
+								</div> 
+								<div class="buy-num">7.5万条评论</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 列表底 -->
+				<div class="box">
+					<div class="box_img13">
+						<img src="./img/download.jpg" alt="">
+					</div>
+				</div>
+				<ul class="tab">
+					<li class="checked">
+						<a href="//h5.jumei.com">触屏版</a>
+					</li> 
+					<li>
+						<a href="http://www.jumei.com/?frevent=1" onclick="_gaq.push(['_trackEvent', 'wap_foot_nav_wap_click', 'wap_foot_nav_wap', 1]);">电脑版</a>
+					</li>
+				</ul>
+				<div class="bottom-rights">
+					<p>©2017 聚美优品 Jumei.com</p>
+				</div>
+			</div>
+
+			
+		</section>
+	</main>
+    <!-- 底部 -->
+    <footer>
+		<div class="bottom-nav" style="background-color: rgb(255, 255, 255); border-top: 1px solid rgb(238, 238, 238);">
+			<a namekey="index" class="tabbar-index" href="//h5.jumei.com" style="color: rgb(254, 64, 112); background-image: url(&quot;./img/download1.png&quot;);">首页</a>
+			<a namekey="coutuan" class="tabbar-coutuan" href="//s.h5.jumei.com/yiqituan/list" style="color: rgb(153, 153, 153); background-image: url(&quot;./img/download4.png&quot;);">拼团</a>
+			<a namekey="cart" class="tabbar-cart" href="//carth5.jumei.com" redpoint="//carth5.jumei.com/api/cart/get_qty?_ajax_=1" style="color: rgb(153, 153, 153); background-image: url(&quot;./img/gwc.png&quot;);">购物车<span class="nav-cart-num" style="display: none;"></span></a>
+			<a namekey="member" class="tabbar-member" href="https://i.jumei.com/m/account/my" style="color: rgb(153, 153, 153); background-image: url(&quot;./img/download3.png&quot;);">我的</a>
+		</div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,378 @@
+*{
+    margin:0;
+    padding:0;
+}
+/*******头部***********/
+.touch-header{
+    background: #fff;
+}
+.touch-header-back {
+    position: absolute;
+    left: 0.04rem;
+    top: 0.973rem;
+    width: 2.4rem;
+    height: 2.5rem;
+    background: url(../img/left_arrow.png) center no-repeat;
+    background-size: contain;
+}
+.touch-header-title {
+    display: block;
+    text-align: center;
+    margin: 0 2.1875rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 17px;
+    color: #333;
+    height: 4.347rem;
+    line-height: 4.347rem;
+}
+.touch-header-home {
+    width: 3.067rem;
+    height: 3.067rem;
+    position: absolute;
+    background: url(../img/home.png) center center no-repeat; 
+    background-size: contain;
+    top: .64rem;
+    right: .693rem;
+}
+
+
+
+/********商品*************/
+.big_pic img{
+    width: 100%;
+    
+}
+.img1{
+    margin: 4.5rem 0 0 0;
+}
+/*中间*/
+main{
+    padding-bottom: 5rem;
+}
+.commodity p{
+    margin-left: 1rem;
+}
+.commodity p span{
+    font-size: 1.5rem;
+}
+/*********商品名******/
+.commodity .commodity_1 a{
+    font-size: 1rem;
+    color: #3c3c3c;
+}
+
+
+/********运费*************/
+.commodity .commodity_2{
+    margin-top:20px;
+    border-bottom:1px solid #ccc ;
+}
+.commodity .commodity_2 a{
+    color: #3c3c3c;
+    margin-right:50px;
+}
+.commodity .commodity_2{
+    font-size: 1rem;
+    color: #3c3c3c;
+}
+/**********价格***********/
+.commodity .commodity_3 .money{
+    color: #fe4070;
+}
+.commodity .commodity_3 .notice{
+    margin-top: 4%;
+    float: right;
+    margin-right: 1rem;
+    /*padding: 0 0.5rem;*/
+    font-size:16px;
+    color: #ccc;
+}
+.old{
+    color:#ccc;
+    font-size:18px;
+    text-decoration: line-through;
+}
+.yuan-mark {
+    font-size: 10px;
+    line-height: 10px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #000;
+    padding: 2px;
+    margin: 0 95px 0 0;
+    display: inline-block;
+}
+
+
+/*************说明*****************/
+.commodity .commodity_4{
+    position: relative;
+    padding:0 0 20px 0;
+    border-bottom:.2rem solid #efefef ;
+}
+.commodity_4 a{
+    margin-left:15px;
+    margin-right:50px;
+}
+.commodity_4 .mm{
+    width: 55%;
+    float: right;
+}
+.commodity .commodity_4{
+    margin-top: 1rem;
+    border-bottom: .1rem solid #ccc;
+}
+.commodity .commodity_4 img{
+    width: .8em;
+}
+.commodity_4 p{
+    width: 80%;
+}
+.commodity p span {
+    font-size: 1rem;
+}
+.commodity_4 p i{
+    color: orange;
+}
+
+
+/*************************/
+.commodity_5{
+    margin: 1rem auto;
+}
+.commodity_5 .poi{
+
+    color: #cccccc;
+    font-size: 1.5rem;
+    padding:2rem 0 0 2rem ;
+    top: 1rem;
+}
+.Promotion{
+    color: orangered;
+    border:.2rem solid orangered ;
+}
+.commodity_5 .l{
+    color: #cccccc;
+    float: right;
+    padding-right:1rem;
+}
+.Promotion_box{
+    position: absolute;
+    background: #fff;
+    width: 100%;
+    bottom:0;
+    height: 50%;
+    display: none;
+}
+.Promotion_box p{
+    padding: 0;
+    margin: 0;
+}
+.cover-head{
+    padding-top: 1rem;
+    width: 100%;
+    font-size: 2rem;
+    border-bottom:.2rem  solid #d4d4d4;
+}
+.cover-head span{
+    float: right;
+}
+.cover-head .glyphicon{
+    font-size: 2rem;
+    color:#ccc;
+}
+.Promotion_box .col-xs-9 p{
+    font-size: 1.5rem;
+}
+.commodity_5 .X{
+    color: #cccccc;
+    float: right;
+    padding-right:1rem;
+}
+.Promotion_box1{
+    position: absolute;
+    background: #fff;
+    width: 100%;
+    bottom:0;
+    height: 60%;
+    /*display: none;*/
+}
+.Promotion_box1 .pic_p{
+    position: absolute;
+    border: .1px solid #3c3c3c;
+    margin: -10% auto auto 4rem;
+}
+
+.commodity_one{
+    padding: 1rem 0 1rem 0;
+    background: #9c9c9c;
+}
+.content_1{
+    background: white;
+    height: 3rem;
+    line-height: 3rem;
+}
+/************************/
+.commodity_tow .content_2{
+    margin-top: 1rem;
+    border-bottom: .1rem solid #ccc;
+}
+.commodity_tow .content_2 img{
+    width: 1em;
+}
+.commodity_tow  .address{
+    width: 80%;
+    margin-left: 10%;
+    padding: 1rem;
+}
+.content_2 p{
+    width: 80%;
+}
+.content_2 p i{
+    color: orange;
+}
+.Goods_box li{
+    width: 50%;
+    float: left;
+}
+.Goods_box li img{
+    width: 5rem;
+}
+.commodity_fove{
+    margin: 2rem  auto 2rem;
+}
+.zxk{
+    padding-top: 5rem;
+}
+.zxk div:first-child:before{
+    content: "|";
+    color: #d4d4d4;
+    float: right;
+}
+.zxk div{
+    float: left;
+    width: 50%;
+    height: 2rem;
+}
+main .picGB{
+    margin: 1rem auto;
+    width: 60%;
+}
+main .picGB li{
+    list-style:none; 
+    float: left;
+    width: 33%;
+}
+.text-color{
+    color:orange;
+    border-bottom: .1rem orange solid;
+}
+.pic_box img{
+    width: 100%;
+    height: 100%;
+}
+.pic2 ul li{
+    width: 33%;
+    height: 8rem;
+    float: left;
+}
+
+.Baseline{
+    position: relative;
+    width: 100%;
+    height: 2.2rem;
+    line-height: 2.2rem;
+    text-align: center;
+    color: #999;
+}
+.Baseline:before{
+    content: "";
+    position: absolute;
+    width: 25%;
+    height: 1px;
+    left: 3.18rem;
+    top: 1.12rem;
+    background: #CCC;
+}
+.Baseline:after{
+    content: "";
+    position: absolute;
+    width: 25%;
+    height: 1px;
+    right: 1.18rem;
+    top: 1.12rem;
+    background: #CCC;
+}
+.duankou ul{
+    margin-top:2rem ;
+}
+.duankou ul li{
+    padding-top:1.25rem ;
+    width: 20%;
+    height: 4rem;
+    float: left;
+}
+.duankou ul li:after{
+    content: "|";
+    color: #d4d4d4;
+    float: right;
+}
+.duankou ul li:last-child:after{
+    content:none;
+}
+
+
+footer{
+    margin: 0;
+    padding: 0;
+    margin: 2rem 0 0 0;
+}
+.dibu{
+    width: 100%;
+}
+.dibu_left{
+    width: 30%;
+    display: block;
+}
+.dibu_left li{
+    display: block;
+    width: 50%;
+    height: 5.7rem;
+    float: left;
+    font-size:1.2rem;
+    color: #ccc;
+    text-align: center;
+    border-top: 1px solid #eee;
+    border-right: 1px solid #eee;
+    background: #fff;
+}
+.dibu_left li img{
+    width: 2rem;
+    height: 2rem;
+}
+.dibu_left li p:first-of-type{
+    padding: 1rem 0 0 0;
+}
+
+
+.dibu_right li{
+    display: block;
+    width: 35%;
+    height: 5.7rem;
+    float: left;
+    text-align: center;
+}
+.dibu_right li p{
+    padding: 2rem 0 0 0 ;
+}
+.fen{
+    background: #FFEAF1;
+    color: #FF4F88;
+}
+.hong{
+    background: #FF4F88;
+    color: #fff;
+}

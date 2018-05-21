@@ -1,0 +1,169 @@
+*{
+	margin:0;
+	padding:0;
+}
+
+/*******头部***********/
+.touch-header-back {
+    position: absolute;
+    left: 1.04rem;
+    top: 1.573rem;
+    width: 1.4rem;
+    height: 1.8rem;
+    background: url(../img/left_arrow.png) center no-repeat;
+    background-size: contain;
+}
+.touch-header-title {
+    display: block;
+    text-align: center;
+    margin: 0 2.1875rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 17px;
+    color: #333;
+    height: 4.347rem;
+    line-height: 4.347rem;
+}
+.touch-header-home {
+    width: 3.067rem;
+    height: 3.067rem;
+    position: absolute;
+    background: url(../img/home.png) center center no-repeat; 
+    background-size: contain;
+    top: .64rem;
+    right: .693rem;
+}
+
+
+/**********主体固定顶部********/
+.outer-wrap {
+    height: 45px;
+}
+#nav-wrap, #newWrap {
+    height: 45px;
+}
+#nav-wrap {
+    width: 100%;
+    height: 45px;
+    position: fixed;
+    top: 0;
+    z-index: 19;
+}
+#newWrap {
+    width: 100%;
+    height: 45px;
+    overflow: hidden;
+}
+.nav-inner {
+    height: 45px;
+    line-height: 45px;
+}
+.nav-item{
+	margin-left:10px;
+}
+
+
+/**********大图*************/
+.box img{
+	width: 100%;
+}
+
+/**********小图**************/
+.title-box{
+	margin: .75rem 0;
+}
+.title_left{
+	width: 50px;
+	height: 2px;
+	left: 118px;
+	box-sizing: border-box;
+    background-color: #d1d1d1;
+    margin-top: 1rem;
+    position: absolute;}
+.title{
+	text-align:center;
+	top:10px;
+}
+.title_right{
+	width: 50px;
+	height: 2px;
+	right: 118px;
+	position: absolute;
+	box-sizing: border-box;
+    background-color: #d1d1d1;
+    margin-top: -1rem;
+}
+
+
+
+.touch-activity-detail {
+    font-size: 0;
+    padding: 0 .25rem;
+    overflow: hidden;
+}
+.touch-activity-detail li {
+    padding-bottom: 4px;
+}
+.touch-activity-detail li {
+    width: 50%;
+    vertical-align: top;
+    float: left;
+    margin-bottom: .25rem;
+    position: relative;
+    border-radius: .1875rem;
+    background: #fff;
+}
+.touch-activity-detail li a {
+    display: block;
+}
+.touch-activity-detail .fangtu, .touch-activity-page[data-imgtype='0'] .product-img {
+    margin: 0 9px 4px 9px;
+    padding-top: 9px;
+}
+.deal-img {
+    width: 100%;
+    height:204px;
+}
+.product-name {
+    font-size: 14px;
+    line-height: 18px;
+    height: 36px;
+    color: #000;
+}
+.tag_text {
+    padding: 4px 9px 4px 9px;
+    height: 12px;
+    line-height: 12px;
+    overflow: hidden;
+}
+.touch-activity-detail li .product-info .price-info {
+    padding: 0 9px;
+    font-size: 12px;
+}
+.buyer-and-comments, .yqt_price {
+    padding: 4px 8px 0 8px;
+}
+.price{
+	color:#fe4070;
+	font-size:18px;
+}
+.old{
+	color:#ccc;
+	font-size:18px;
+	text-decoration: line-through;
+}
+.yuan-mark {
+    font-size: 10px;
+    line-height: 10px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 15px;
+    border: 1px solid #fe4070;
+    color: #fe4070;
+    padding: 2px;
+    margin: 0 95px 0 0;
+    display: inline-block;
+    float: right;
+}
